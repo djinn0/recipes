@@ -6,7 +6,11 @@
     </head>
     
     <body>
-    
+      <ul>
+        <li>home</li>
+        <li>new recipes</li>
+        <li>index</li>
+      </ul>
     
     
     </body>
