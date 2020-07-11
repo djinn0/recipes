@@ -2,15 +2,15 @@
 <html>
 <head>
 <style>
-ul {
+.navigation-bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: red;
 }
 
-li {
+navigation-element {
   float: left;
 }
 
@@ -57,9 +57,9 @@ li.dropdown {
 <body>
 
 <!-- Navigation Bar content -->  
-<ul>
-  <li><a href="index.html">home</a></li>
-  <li><a href="new.html">new recipes</a></li>
+<ul class="navigation-bar">
+  <li class="navigation-element"><a href="index.html">Home</a></li>
+  <li class="navigation-element"><a href="new.html">New Recipes</a></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
     <div class="dropdown-content">
