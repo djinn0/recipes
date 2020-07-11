@@ -7,38 +7,29 @@
     
     <style>
       
-      ul {
+      navigation-bar ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #333;
+      background-color: red;
       }
 
-      li {
+      navigation-element li {
       float: left;
       vertical-align: middle; 
        }
 
-      .navigation1 a {
+      .navigation-element a {
       display: inline-block;
-      color: red;
+      color: white;
       text-align: center;
       padding: 8px 10px;
       text-decoration: none;
       }
       
-      .navigation2 a {
-      display: inline-block;
-      color: blue;
-      text-align: center;
-      padding: 8px 10px;
-      text-decoration: none;
-      }
-
-
-      li a:hover {
-      background-color: #111;
+      navigation-element li a:hover {
+      background-color: blue;
       }
       
 
@@ -47,9 +38,9 @@
     
   </head>
   <body>
-     <ul>
-       <li class="navigation1"><a href="index.html">home</a></li> 
-       <li class="navigation2"><a href="new.html">new recipes</a></li>
+     <ul class="navigation-bar">
+       <li class="navigation-element"><a href="index.html">home</a></li> 
+       <li class="navigation-element"><a href="new.html">new recipes</a></li>
        
        <!--
        <li class="dropdown">
