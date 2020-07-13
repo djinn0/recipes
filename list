@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar content -->  
+  <ul class="navigation-bar">
+    <li class="navigation-element"><a href="index.html">Homestyle</a></li>
+    <li class="navigation-element"><a href="new.html">New Recipes</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Dropdown</a>
+      <div class="dropdown-content">
+        <a href="glossary.html">Glossary</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </li>
+  </ul>
+  
+  <div><br><br></div>
+    
+    <h1>Index of Recipies</h1>
+    <ul>
+      <!--A-->
+      <!--B-->
+        <li><a href="blackbeans.html">Black Beans and Plantains</a></li>
+      <!--C-->
+      <!--D-->
+      <!--E-->
+      <!--F-->
+      <!--G-->
+        <li><a href="germanpancakes.html">German Pancakes</a></li>
+      <!--H-->
+      <!--I-->
+      <!--J-->
+      <!--K-->
+      <!--L-->
+      <!--M-->
+      <!--N-->
+      <!--O-->
+      <!--P-->
+      <!--Q-->
+      <!--R-->
+      <!--S-->
+      <!--T-->
+      <!--U-->
+      <!--V-->
+      <!--W-->
+      <!--X-->
+      <!--Y-->
+      <!--Z-->
+      
+    
+    
+    
+    
+    </ul>
+    
+    
+    
+    
+    
+</body>
+
+
+
+
+</html>
