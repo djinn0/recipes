@@ -63,12 +63,27 @@
       
     </div>
     
+    <script>
+      let x = document.getElementById("recipe-block")
+      x.addEventListener("mouseover", funct1)
+      x.addEventListener("mouseout" funct2)
+      
+      function funct1()
+      {
+        document.getElementById("recipe-block").style.fontSize = "48px";
+      }
+      
+      function funct2()
+      {
+        document.getElementById("recipe-block").style.fontSize = "24px";
+      }
 
+    </script>
 
 
 
     <h2>Ingredients</h2>
-    <ul class="recipe">
+    <ul class="recipe" id="recipe-block">
       <li>4 Eggs</li>
       <li>1 cup Milk </li>
       <li>1 cup Flour </li>
