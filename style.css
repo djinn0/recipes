@@ -52,5 +52,11 @@
        display: block;	
    }	
 
-/* Styling for recipes id="recipe */
+/* Styling for recipes */
+
+/* Styling for glossary entrys, class="glossary-entry" */
+.glossary-entry {
+    margin-left: 2%;
+
+}
    
