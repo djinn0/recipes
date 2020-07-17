@@ -9,6 +9,5 @@ function generateNavBar(){
     const d1 = '<a href="list.html">Recipe Index</a>';
     const d2 = '<a href="glossary.html">Glossary</a>';
     const d3 = '<a href="#">Link 3</a>';
-
-    x.insertAdjacentHTML('afterbegin', '<ul class="navigation-bar">' + n1 + n2 + '<li class="dropdown"><a href="#" class="dropbtn">Menu</a><div class="dropdown-content">' + d1 + d2 + d3 + '</div></ul>')
+    x.insertAdjacentHTML('afterbegin', '<ul class="navigation-bar">' + n1 + n2 + '<li class="dropdown"><a href="#" class="dropbtn">Menu</a><div class="dropdown-content">' + d1 + d2 + d3 + '</div></ul><br>')
     }
