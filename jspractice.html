@@ -2,17 +2,35 @@
   <html>
     <head>
       
-      <script src="navigationbar.js"></script>
-      <link rel="stylesheet" type="text/css" href="style.css">
-      
+   
     		
     </head>
-      <body>
+    <body>
         
-        <div id="navBarLoc"></div>
-        <script>generateNavBar();</script>
-        <h2>hello world</h2>
-    </body>
-   </html>
+      
+      <!--
+      <button onclick="funkClick()">The time is?</button>
+      <p id=testP>hi</p>
+      <script>
+        function funkClick()
+        {
+          document.getElementById("testP").innerHTML = "clicked";
+        }
+      </script>    
+    -->
+    
+    <button id="testx">hello world</button>
+    <p id="testP">hi</p>
+    <script>
+      var xx = document.getElementById("testx");
+      xx.addEventListener("click", funkx);
+      function funkx()
+      {
+        document.getElementById("testP").innerHTML += "clicked";
+      }
+    </script>
+    
 
+    </body>
+  </html>
  
