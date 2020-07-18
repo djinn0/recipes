@@ -20,14 +20,23 @@
     -->
     
     <button id="testx">hello world</button>
-    <p id="testP">hi</p>
+    <ul id="testP">
+      <li>hello</li>
+      <li>world</li>
+    </ul>
     <script>
-      var xx = document.getElementById("testx");
-      xx.addEventListener("click", funkx);
+      var xx = document.getElementById("testP");
+      xx.addEventListener("mouseover", funkx);
+      xx.addEventListener("mouseout", funkxx)
       function funkx()
       {
-        document.getElementById("testP").innerHTML += "clicked";
+        document.getElementById("testP").style.fontSize = "40px";
       }
+      function funkxx()
+      {
+        document.getElementById("testP").style.fontSize = "20px";
+      }
+    
     </script>
     
 

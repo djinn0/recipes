@@ -1,5 +1,5 @@
   /* --styling for navigation bar --*/ 
-   .navigation-bar {	 
+  .navigation-bar {	 
       list-style-type: none;	
       margin: 0;	
       padding: 0;	
@@ -8,7 +8,7 @@
       top: 0;	
       width: 100%;	
   }	
-
+  
   .navigation-element {	
       float: left;	
   }	
