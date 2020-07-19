@@ -6,7 +6,7 @@ function generateFooter()
     var x = document.getElementById("footerLoc");
     var d = new Date();
     var n = d.getFullYear(); /* Adds current year to footer */
-    x.insertAdjacentHTML('afterbegin',`<footer id="footer"><ul class="footer-bar" id="fb"><li class="footer-element">© David Redd ${n}</li><li class="footer-element">about me</li></ul></footer>`);
+    x.insertAdjacentHTML('afterbegin',`<footer id="footer"><ul class="footer-bar" id="fb"><li class="footer-element">© David Redd ${n}</li><li class="footer-element">About Me</li></ul></footer>`);
     
     /*styling for footer*/
     var f = document.getElementById("footer");
