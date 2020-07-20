@@ -62,6 +62,11 @@
 }
 
 /* Styling for footer, causes elements to be displayed horizontaly*/
+.footerLoc{
+    position: relative;
+    bottom: 0px;
+}
+
 .footer-element {
     display: inline-block;	
     color: white;	

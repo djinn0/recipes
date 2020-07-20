@@ -21,6 +21,5 @@ function generateFooter()
     fb.style.listStyleType = "none"
     
     
-    document.getelementById("fe1").style.color = "red";
-    document.getelementById("fe2").style.display = "inline-block";
+
 }
