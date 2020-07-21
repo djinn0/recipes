@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <script src="navigationbar.js"></script>
+      <script src="footer.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <style>
+        .main-container
+        {
+          min-height: 100vh;
+          position: relative;
+        }
+
+        .footer-bar
+        {
+          position: absolute;
+        }
+        
+
+      </style>
+
+    </head>
+
+    <body>
+      <div class="main-container">
+        <div id="navBarLoc"></div>
+        <script>generateNavBar();</script>  
+
+
+
+        <div id="footerLoc"></div>
+        <script>generateFooter();</script>
+      </div>
+    </body>
+
+
+
+
+  </html>
