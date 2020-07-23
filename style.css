@@ -1,10 +1,40 @@
   /* -- general styling -- */
-  a{
+  a{ /*anchor links inherit styling from parent class*/
     color: inherit;
     text-decoration: none;
   }
   
+  .picture { /* sizing and positioning of pictures in recipes */
+    width: 60%;
+    height: 60%;
+    margin-left: 2%;
+  } 
   
+  body{
+    margin: 0px;
+  }
+
+  .main-container
+  {
+    min-height: 100vh;
+    position: relative;
+  }
+
+
+  .recipe { /* styling for recipe list */
+    list-style-type: none;
+    display:inline-block;
+    border:2px solid #000;
+    padding:20px;
+    font-size: 24px;
+    margin-left: 2%;
+  }
+
+  .cookInstruct {
+    font-size: 24px;
+    margin-left: 2%;
+    width: 80%;
+  }
   
   
   /* --styling for navigation bar --*/ 
@@ -80,7 +110,12 @@
     display: inline-block;	
     color: white;	
     text-align: center;	
-	padding: 0px 8px;
+    padding: 10px 8px;
     text-decoration: none;
-  }
-   
+}
+
+
+.footer-bar
+{
+  position: absolute;
+}
