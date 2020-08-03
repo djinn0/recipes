@@ -18,7 +18,7 @@
         }
       </script>    
     -->
-    
+    <!--
     <button id="testx">hello world</button>
     <ul id="testP">
       <li>hello</li>
@@ -38,7 +38,43 @@
       }
     
     </script>
+    -->
+
+    <!--Enter second number<input type="text" id="secondnum"/><br><br>-->
+
     
+    <label for="tentacles">Enter first number (0-100):</label>
+    <input type="number" id="fn" name="firstnumber" min="0" max="100"><br>
+    <label for="tentacles">Enter second number (0-100):</label>
+    <input type="number" id="sn" name="secondnumber" min="0" max="100"><br>
+    
+    
+    
+    <button name="button" id="button1">Press me</button>
+
+    <p id="testoutput"></p>
+    <script>
+      var v = document.getElementById("button1");
+      v.addEventListener("click", funadd);
+
+
+
+      function funadd()
+      {
+       
+        var xs = document.getElementById("fn").value;
+        var ys = document.getElementById("sn").value;
+        var x = Number(xs);
+        var y = Number(ys);
+        var z = x + y;
+        document.getElementById("testoutput").innerHTML = z;
+
+      }
+
+    </script>
+    
+
+
 
     </body>
   </html>

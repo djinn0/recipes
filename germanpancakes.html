@@ -3,6 +3,7 @@
   <head>
     <title>German Pancakes</title>
     <script src="navigationbar.js"></script>
+    <script src="footer.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
       <style>
         
@@ -40,68 +41,74 @@
   </head>
   <body>
     
-    <!-- Navigation Bar-->  
-    <div id="navBarLoc"></div>
-    <script>generateNavBar();</script>
+    <div class="main-container">
+      <!-- Navigation Bar-->  
+      <div id="navBarLoc"></div>
+      <script>generateNavBar();</script>
 
 
-    <h1>German Pancakes</h1>
-    <div>
-      <img src="GermanPancake.jpg" alt="A german f***ing pancake" class="picture">  
+      <h1>German Pancakes</h1>
+      <div>
+        <img src="GermanPancake.jpg" alt="A german f***ing pancake" class="picture">  
+        
+      </div>
       
+      
+      <script>
+        let x = document.getElementById("recipe-block")
+        x.addEventListener("mouseover", funct1)
+        x.addEventListener("mouseout" funct2)
+        
+        function funct1()
+        {
+          document.getElementById("recipe-block").style.fontSize = "48px";
+        }
+        
+        function funct2()
+        {
+          document.getElementById("recipe-block").style.fontSize = "24px";
+        }
+
+      </script>*/
+    
+
+
+      <h2>Ingredients</h2>
+      <ul class="recipe" id="recipe-block">
+        <li>4 Eggs</li>
+        <li>1 cup Milk </li>
+        <li>1 cup Flour </li>
+        <li>1/2 tsp Salt</li>
+        <li>1/2 tsp Nutmeg</li>
+        <li>2 Tbs Butter (1/4 stick)
+      </ul>
+      
+      <p class="cookInstruct">Preheat oven to 450 degrees. Place butter in a medium/large fry pan and place the pan in the oven to melt the butter. Blend the other ingredients then pour the
+        resulting batter into hot fry pan. Place the frypan back in the oven and bake for 15-20 min. Remove when the top and outside edges have started to brown. 
+        the pancake will rise twice to three times its original size but will colapse back into the pan when removed from the oven. Cut the pancake into slices and serve 
+        with toppings of choice including powderded sugar and lemon juice, fruit with whipped cream, butter and maple syrup ect.</p>
+      
+      <!--
+      <script>
+          var xx = document.getElementById("recipe-block");
+        xx.addEventListener("mouseover", funkx);
+        xx.addEventListener("mouseout", funkxx)
+        function funkx()
+        {
+          document.getElementById("recipe-block").style.fontSize = "48px";
+        }
+        function funkxx()
+        {
+          document.getElementById("recipe-block").style.fontSize = "24px";
+        }
+      </script>
+      -->
+     <!--Footer Bar-->
+     <div><br><br><br></div>
+     <div id="footerLoc"></div>
+     <script>generateFooter();</script>
+    
     </div>
-    
-    
-    <script>
-      let x = document.getElementById("recipe-block")
-      x.addEventListener("mouseover", funct1)
-      x.addEventListener("mouseout" funct2)
-      
-      function funct1()
-      {
-        document.getElementById("recipe-block").style.fontSize = "48px";
-      }
-      
-      function funct2()
-      {
-        document.getElementById("recipe-block").style.fontSize = "24px";
-      }
-
-    </script>*/
-  
-
-
-    <h2>Ingredients</h2>
-    <ul class="recipe" id="recipe-block">
-      <li>4 Eggs</li>
-      <li>1 cup Milk </li>
-      <li>1 cup Flour </li>
-      <li>1/2 tsp Salt</li>
-      <li>1/2 tsp Nutmeg</li>
-      <li>2 Tbs Butter (1/4 stick)
-    </ul>
-    
-    <p class="cookInstruct">Preheat oven to 450 degrees. Place butter in a medium/large fry pan and place the pan in the oven to melt the butter. Blend the other ingredients then pour the
-       resulting batter into hot fry pan. Place the frypan back in the oven and bake for 15-20 min. Remove when the top and outside edges have started to brown. 
-       the pancake will rise twice to three times its original size but will colapse back into the pan when removed from the oven. Cut the pancake into slices and serve 
-       with toppings of choice including powderded sugar and lemon juice, fruit with whipped cream, butter and maple syrup ect.</p>
-    
-    <!--
-    <script>
-        var xx = document.getElementById("recipe-block");
-      xx.addEventListener("mouseover", funkx);
-      xx.addEventListener("mouseout", funkxx)
-      function funkx()
-      {
-        document.getElementById("recipe-block").style.fontSize = "48px";
-      }
-      function funkxx()
-      {
-        document.getElementById("recipe-block").style.fontSize = "24px";
-      }
-    </script>
-    -->
-    
   </body>
 
 
