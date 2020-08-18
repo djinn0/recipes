@@ -1,73 +1,73 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Pupusa</title>
-    <script src="navigationbar.js"></script>
-    <script src="footer.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-      <style>
-        
-        
-        h1{
-          margin-left: 2%;
-        }
-        
-  
-
-        h2 {
-          margin-left: 2%;
-        }
-        
-      
-        .cookInstruct {
-          font-size: 24px;
-          margin-left: 2%;
-          width: 80%;
-        }
-      
-      </style>
-  
-  </head>
-  <body>
-    <!-- Navigation Bar content -->
-    <div id="navBarLoc"></div>
-    <script>get</script>
-    <script>generateNavBar();</script>
-      
-
-    <h1 class="recipe-title">Pupusas topped with coleslaw and salsa rosa</h1>
-    <div>
-      <img src="pupusa.jpg" alt="A Pupusa topped with coleslaw and salsa." class="picture">  
-      
-    </div>
-
-    <h2>Pupusas</h2>
-    <ul class="recipe" id="recipe-block">
-      <li>4 slices uncooked Bacon</li>
-      <li>1/2 tsp red pepper flakes</li>
-      li>1/4 cup cream</li>
-      <li>1 tsp minced garlic (1-2 clove)</li>
-      <li>2 Tbsp Butter (room temperature)</li>
-      <li>1/4 cup shredded Parmesan cheese</li>
-      <li>1/4 cup shredded Mozzarella cheese</li>
-      <li>2 eggs/li>
-      <li>1/2 lb Spagetti (2-3 quarter-sized bundles)</li>
-      <li></li>
-    </ul>
+  <html>
+    <head>
+      <title>Pupusa</title>
+      <script src="navigationbar.js"></script>
+      <script src="footer.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+          
+          
+          h1{
+            margin-left: 2%;
+          }
+          
     
-    <p class="cookInstruct"> Bring water to a boil in a large pot then cook the Spagetti. Warm a oven safe dish in oven at 200 degrees.
-    Cook bacon until crispy and set aside. Discard half the bacon grease, add red pepper flakes to the remaining grease and remove from heat to cool.
-    Add cream and garlic to the grease and bring to a low simmer. Drain pasta and place in the warm oven safe dish with the butter, stir until the noodles are evenly coated and return to oven.
-    Combine cheese and eggs in a mixing bowl and set aside. Cut bacon into small bits and add to the cream mixture. Pour the cream mixture over the noodles and mix until noodles are evenly coated. 
-    Pour the cheese and egg mixture over the noodles and mix. Serve and enjoy. <b>Note:</b> Adding the egg mixture last will allow the eggs to cook a little without causing them to scramble ruining the dish's creamy texture.
-    </p>
+
+          h2 {
+            margin-left: 2%;
+          }
+          
+        
+          .cookInstruct {
+            font-size: 24px;
+            margin-left: 2%;
+            width: 80%;
+          }
+        
+        </style>
     
-   
+    </head>
+    <body>
+      <!-- Navigation Bar content -->
+      <div id="navBarLoc"></div>
+      <script>get</script>
+      <script>generateNavBar();</script>
+        
 
-    <div id="footerLoc"></div>
-    <script>generateFooter();</script>
+      <h1 class="recipe-title">Pupusas topped with coleslaw and salsa rosa</h1>
+      <div>
+        <img src="pupusa.jpg" alt="A Pupusa topped with coleslaw and salsa." class="picture">  
+        
+      </div>
 
-</body>
+      <h2>Pupusas</h2>
+      <ul class="recipe" id="recipe-block">
+        <li>4 slices uncooked Bacon</li>
+        <li>1/2 tsp red pepper flakes</li>
+        li>1/4 cup cream</li>
+        <li>1 tsp minced garlic (1-2 clove)</li>
+        <li>2 Tbsp Butter (room temperature)</li>
+        <li>1/4 cup shredded Parmesan cheese</li>
+        <li>1/4 cup shredded Mozzarella cheese</li>
+        <li>2 eggs/li>
+        <li>1/2 lb Spagetti (2-3 quarter-sized bundles)</li>
+        <li></li>
+      </ul>
+      
+      <p class="cookInstruct"> Bring water to a boil in a large pot then cook the Spagetti. Warm a oven safe dish in oven at 200 degrees.
+      Cook bacon until crispy and set aside. Discard half the bacon grease, add red pepper flakes to the remaining grease and remove from heat to cool.
+      Add cream and garlic to the grease and bring to a low simmer. Drain pasta and place in the warm oven safe dish with the butter, stir until the noodles are evenly coated and return to oven.
+      Combine cheese and eggs in a mixing bowl and set aside. Cut bacon into small bits and add to the cream mixture. Pour the cream mixture over the noodles and mix until noodles are evenly coated. 
+      Pour the cheese and egg mixture over the noodles and mix. Serve and enjoy. <b>Note:</b> Adding the egg mixture last will allow the eggs to cook a little without causing them to scramble ruining the dish's creamy texture.
+      </p>
+      
+    
+
+      <div id="footerLoc"></div>
+      <script>generateFooter();</script>
+
+    </body>
 
 
 
