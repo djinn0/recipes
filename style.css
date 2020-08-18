@@ -8,16 +8,22 @@
     width: 60%;
     height: 60%;
     margin-left: 2%;
+    box-shadow: 10px 10px 5px #333;
   } 
   
   body{
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
   }
 
   .main-container
   {
     min-height: 100vh;
     position: relative;
+    background-color: white;
+    padding: 0;
+    margin: 0;
   }
 
 
@@ -28,6 +34,7 @@
     padding:20px;
     font-size: 24px;
     margin-left: 2%;
+    box-shadow: 10px 10px 5px #333
   }
 
   .cookInstruct {
@@ -45,7 +52,8 @@
       background-color: #333;	
       position: fixed;	
       top: 0;	
-      width: 100%;	
+      width: 100%;
+      	
   }	
   
   .navigation-element {	
@@ -115,7 +123,11 @@
 }
 
 
-.footer-bar
+/*.footer-bar
 {
   position: absolute;
+}*/
+.footer-bar{
+bottom: 0;
+
 }

@@ -9,8 +9,10 @@ function generateFooter()
     let f1 = `<li class="footer-element"><a href="https://www.linkedin.com/in/david-redd">&copy David Redd ${n}</a></li>`
     let f2 = '<li class="footer-element"><a href="aboutme.html">About</a></li>'
     let f3 = '<li class="footer-element"><a href="aboutme.html">Contact</a></li>'
-    x.insertAdjacentHTML('afterbegin','<ul class="footer-bar" id="fb">' + f1 + f2 + f3 + '</ul>');
-    
+    x.insertAdjacentHTML('afterend','<ul class="footer-bar" id="fb">' + f1 + f2 + f3 + '</ul>');
+    x.insertAdjacentHTML('afterend', '<br><br>')
+
+
     /*styling for footer*/
     let f = document.getElementById("fb");
     f.style.backgroundColor="#333";
@@ -19,6 +21,7 @@ function generateFooter()
     f.style.display = "block";
     f.style.bottom = "0";
     f.style.width = "100%";
+    f.style.boxShadow = "0px 30px 0px 30px #333";
 
     
     let fb = document.getElementById("fb");
