@@ -38,7 +38,7 @@
       }
     
     </script>
-    -->
+    
 
     <!--Enter second number<input type="text" id="secondnum"/><br><br>-->
 
@@ -73,7 +73,126 @@
 
     </script>
     
-
+    --->
+      <div> Convert 
+    <input id="inputValue" type="number" value="1" min="0" max="10">
+    <select id="inputType" name="inputlist">
+        <option>Cup</option>
+        <option>Quart</option>
+        <option>Gallon</option>
+        <option>Ounce</option>
+        <option>Milliliter</option>
+        <option>Table Spoon</option>
+        <option>Tea Spoon</option>
+    </select>
+    to
+    <select id="outputType" name="outputlist">
+        <option>Cup</option>
+        <option>Quart</option>
+        <option>Gallon</option>
+        <option>Ounce</option>
+        <option>Milliliter</option>
+        <option>Table Spoon</option>
+        <option>Tea Spoon</option>
+    </select>
+    </div>
+    <button id="buttonConvert">Convert</button>
+    <p id="display"></p>
+    <script>
+        var c = document.getElementById("buttonConvert");
+        c.addEventListener("click", conversions);
+        
+        function conversions()
+        { 
+            var val = document.getElementById("inputValue").value;
+            var inVal = Number(val);
+            var inType = document.getElementById("inputType").value;
+            var outType = document.getElementById("outputType").value;
+            var outVal = 0;
+            var dis = document.getElementById("display");
+            
+            if (inType == "Cup"){
+                if (outType == "Cup"){outVal = inVal}
+                else if (outType == "Quart"){outVal = inVal/4}
+                else if (outType == "Gallon"){outVal = inVal/16}
+                else if (outType == "Ounce"){outVal = inVal*8}
+                else if (outType == "Milliliter"){outVal = inVal * 236.59}
+                else if (outType == "Table Spoon"){outVal = inVal*16}
+                else if (outType == "Tea Spoon"){outVal = inVal*48}
+                else {dis.innerHTML = "Error Output Type not Recognized"}
+                dis.innerHTML = outVal + " " + outType;
+            }   
+            else if (inType == "Quart"){
+                if (outType == "Cup"){outVal = inVal * 4}
+                else if (outType == "Quart"){outVal = inVal}
+                else if (outType == "Gallon"){outVal = inVal/4}
+                else if (outType == "Ounce"){outVal = inVal*32}
+                else if (outType == "Milliliter"){outVal = inVal * 946.36}
+                else if (outType == "Table Spoon"){outVal = inVal*64}
+                else if (outType == "Tea Spoon"){outVal = inVal*192}
+                else {dis.innerHTML = "Error Output Type not Recognized"}
+                dis.innerHTML = outVal + " " + outType;
+            }
+            else if (inType == "Gallon"){
+                if (outType == "Cup"){outVal = inVal * 16}
+                else if (outType == "Quart"){outVal = inVal * 4}
+                else if (outType == "Gallon"){outVal = inVal}
+                else if (outType == "Ounce"){outVal = inVal*128}
+                else if (outType == "Milliliter"){outVal = inVal * 3785.41}
+                else if (outType == "Table Spoon"){outVal = inVal * 256}
+                else if (outType == "Tea Spoon"){outVal = inVal * 768}
+                else {dis.innerHTML = "Error Output Type not Recognized"}
+                dis.innerHTML = outVal + " " + outType;
+            }
+            else if (inType == "Ounce"){
+                if (outType == "Cup"){outVal = inVal/8}
+                else if (outType == "Quart"){outVal = inVal/32}
+                else if (outType == "Gallon"){outVal = inVal/128}
+                else if (outType == "Ounce"){outVal = inVal}
+                else if (outType == "Milliliter"){outVal = inVal * 29.57}
+                else if (outType == "Table Spoon"){outVal = inVal*2}
+                else if (outType == "Tea Spoon"){outVal = inVal*6}
+                else {dis.innerHTML = "Error Output Type not Recognized"}
+                dis.innerHTML = outVal + " " + outType;
+            }
+            else if (inType == "Milliliter"){
+                if (outType == "Cup"){outVal = inVal}
+                else if (outType == "Quart"){outVal = inVal/4}
+                else if (outType == "Gallon"){outVal = inVal/16}
+                else if (outType == "Ounce"){outVal = inVal*8}
+                else if (outType == "Milliliter"){outVal = inVal*29.57}
+                else if (outType == "Table Spoon"){outVal = inVal*2}
+                else if (outType == "Tea Spoon"){outVal = inVal*6}
+                else {dis.innerHTML = "Error Output Type not Recognized"}
+                dis.innerHTML = outVal + " " + outType;
+            }
+            else if (inType == "Table Spoon"){
+                if (outType == "Cup"){outVal = inVal/16}
+                else if (outType == "Quart"){outVal = inVal/64}
+                else if (outType == "Gallon"){outVal = inVal/256}
+                else if (outType == "Ounce"){outVal = inVal/2}
+                else if (outType == "Milliliter"){outVal = inVal * 14.787}
+                else if (outType == "Table Spoon"){outVal = inVal}
+                else if (outType == "Tea Spoon"){outVal = inVal*3}
+                else {dis.innerHTML = "Error Output Type not Recognized"}
+                dis.innerHTML = outVal + " " + outType;
+            }
+            else if (inType == "Tea Spoon"){
+                if (outType == "Cup"){outVal = inVal/48}
+                else if (outType == "Quart"){outVal = inVal/192}
+                else if (outType == "Gallon"){outVal = inVal/768}
+                else if (outType == "Ounce"){outVal = inVal/6}
+                else if (outType == "Milliliter"){outVal = inVal* 4.929}
+                else if (outType == "Table Spoon"){outVal = inVal/3}
+                else if (outType == "Tea Spoon"){outVal = inVal}
+                else {dis.innerHTML = "Error Output Type not Recognized"}
+                dis.innerHTML = outVal + " " + outType;
+            }
+            else {
+                dis.innerHTML = "Error Input not Recognized";
+            }
+        }
+    </script>
 
 
     </body>
