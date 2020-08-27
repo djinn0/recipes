@@ -16,7 +16,6 @@
     padding: 0;
     background-color: white;
   }
-
   .main-container
   {
     min-height: 100vh;
@@ -45,6 +44,7 @@
   
   
   /* --styling for navigation bar --*/ 
+  
   .navigation-bar {	 
       list-style-type: none;	
       margin: 0;	
@@ -59,7 +59,7 @@
   .navigation-element {	
       float: left;	
   }	
-
+  
 
   .navigation-element a, .dropbtn {	
       display: inline-block;	
@@ -68,7 +68,7 @@
       padding: 10px 8px;	
       text-decoration: none;	
   }	
-
+  
   .navigation-element a:hover, .dropdown:hover .dropbtn {	
       background-color: #111;	
   }	
@@ -99,7 +99,7 @@
   .dropdown:hover .dropdown-content {	
        display: block;	
    }	
-
+*/
 /* Styling for recipes */
 
 /* Styling for glossary entrys, class="glossary-entry" */
