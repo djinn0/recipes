@@ -3,13 +3,14 @@ function generateSelectorNavBar() {
     var x = document.getElementsByTagName("body")[0];
     var e1 = '<li class="navigation-element"><a href="index.html">Home</a></li>';
     var e2 = '<li class="navigation-element"><a href="index.html">New Recipes</a></li>';
-    var edc1 = '<a href="list.html">Recipe Index</a>';
+    var edc1 = '<a href="list.html">Recipe Index</a>'; 
     var edc2 = '<a href="glossary.html">Glossary</a>'; 
     var edm = '<div class="dropdown-content">' + edc1 + edc2 + '</div>';
     var e3 = '<li class="navigation-element" id="dropdown"><a href="#">Menu</a>' + edm + '</li>';
-    var e4 = '<li class=navigation-element"><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></li>';
-    
-    x.insertAdjacentHTML('afterbegin','<ul class="navigation-bar" id="nb">' + e1 + e2 + e3 + e4 + '</ul>');
+    var e4 = '<li class="navigation-element"><a href="#">Converter</a></li>';
+    var e5 = '<li class=navigation-element"><label class="switch"><input type="checkbox" id="cb"><span class="slider"></span></label></li>'; /* adds a checkbox that styled as a slider switch to navigation bar> */
+    var c1 = '<br><br><div id="converter-bar"></div>' /* Adds a div for a unit converter below the nav bar. */
+    x.insertAdjacentHTML('afterbegin','<ul class="navigation-bar" id="nb">' + e1 + e2 + e3 + e4 + e5 + '</ul>' + c1);
     
     var s = document.getElementsByTagName("style")[0];
     
@@ -34,4 +35,56 @@ function generateSelectorNavBar() {
     
 }
 
-	
+window.addEventListener('load', (event) => {
+    var cs = document.getElementById('cb');
+    cs.addEventListener('click', generateConverter);
+});
+
+function generateConverter(){
+    var d = document.getElementById('converter-bar');
+    var inVal = '<input id="inputValue" type="number" value="1" min="0" max="10"></input>';
+    var o1 = '<option>Cup</option>', o2 = '<option>Quart</option>', o3 = '<option>Gallon</option>', o4 ='<option>Ounce</option>', o5 = '<option>Milliliter</option>', o6 = '<option>Table Spoon</option>', o7 ='<option>Tea Spoon</option>';
+    var inType = '<select id="inputType">' + o1 + o2 + o3 + o4 + o5 + o6 + o7 + '</select>';
+    var outType = '<select id="outputType">' + o1 + o2 + o3 + o4 + o5 + o6 + o7 + '</select>';
+    var cs = document.getElementById('cb');
+    if (cs.checked == true){ /* If the switch is on generate converter bar */
+        d.insertAdjacentHTML('afterbegin', 'Convert ' + inVal + inType + ' to ' + outType + ' <button id="cbtn">&rarr;</button>' + ': ' +  '<span id="out"></span>');
+        document.getElementById('cbtn').addEventListener('click', convert);
+    }
+    else {
+        d.innerHTML = '';
+    }
+}
+
+function convert(){
+    var val = document.getElementById('inputValue').value;
+    var inVal = Number(val);
+    var inType = document.getElementById('inputType').value;
+    var outType = document.getElementById('outputType').value;
+    var outVal = 0;
+    var y = 0;
+    var z = 0;
+    var dis = document.getElementById('display');
+                
+    
+    /* Convert input value to cups */ 
+    if (inType == 'Cup'){y = inVal}
+    else if (inType == 'Quart'){y = inVal * 4}
+    else if (inType == 'Gallon'){y = inVal * 16}
+    else if (inType == 'Ounce'){y = inVal / 8}
+    else if (inType == 'Milliliter'){y = inVal / 236.588 }
+    else if (inType == 'Table Spoon'){y= inval / 16}
+    else if (inType == 'Tea Spoon'){y = inVal / 48}
+    
+    /* Convert intermediate value in cups into final value */
+    if (outType == 'Cup'){z = y}
+    else if (outType == 'Quart'){z = y / 4}
+    else if (outType == 'Gallon'){z = y / 16}
+    else if (outType == 'Ounce'){z = y * 8}
+    else if (outType == 'Milliliter'){z = y * 236.588 }
+    else if (outType == 'Table Spoon'){z = y * 16}
+    else if (outType == 'Tea Spoon'){z = y * 48}
+    
+    /* display output */
+    document.getElementById('out').innerHTML = z + ' ' + outType + '(s)';
+}
