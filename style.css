@@ -99,7 +99,7 @@
   .dropdown:hover .dropdown-content {	
        display: block;	
    }	
-*/
+
 /* Styling for recipes */
 
 /* Styling for glossary entrys, class="glossary-entry" */
@@ -109,15 +109,11 @@
 }
 
 /* Styling for footer, causes elements to be displayed horizontaly*/
-.footerLoc{
-    position: relative;
-    bottom: 0px;
-}
 
 .footer-element {
     display: inline-block;	
     color: white;	
-    text-align: center;	
+    /*text-align: center;*/	
     padding: 10px 8px;
     text-decoration: none;
 }
