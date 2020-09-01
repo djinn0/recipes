@@ -155,7 +155,7 @@
                 dis.innerHTML = outVal + " " + outType;
             }
             else if (inType == "Milliliter"){
-                if (outType == "Cup"){outVal = inVal}
+                if (outType == "Cup"){outVal = inVal/236.588}
                 else if (outType == "Quart"){outVal = inVal/4}
                 else if (outType == "Gallon"){outVal = inVal/16}
                 else if (outType == "Ounce"){outVal = inVal*8}
