@@ -31,7 +31,7 @@ function generateSelectorNavBar() {
     var ss3 = '.slider:before {position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .4s; border-radius: 50%;}'
     var ss4 = 'input:checked + .slider { background-color: #2196F3; }'
     var ss5 = 'input:checked + .slider:before { transform: translateX(16px); }'
-    s.innerHTML = sn1 + sn2 + sn3 + sn4 + sn5 + sn6 + sn7 + ss1 + ss2 + ss3 + ss4 + ss5;
+    s.insertAdjacentHTML('beforeend', sn1 + sn2 + sn3 + sn4 + sn5 + sn6 + sn7 + ss1 + ss2 + ss3 + ss4 + ss5);
     
 }
 
@@ -41,19 +41,28 @@ window.addEventListener('load', (event) => {
 });
 
 function generateConverter(){
+    /* Converter contents */
     var d = document.getElementById('converter-bar');
     var inVal = '<input id="inputValue" type="number" value="1" min="0" max="10"></input>';
     var o1 = '<option>Cup</option>', o2 = '<option>Quart</option>', o3 = '<option>Gallon</option>', o4 ='<option>Ounce</option>', o5 = '<option>Milliliter</option>', o6 = '<option>Table Spoon</option>', o7 ='<option>Tea Spoon</option>';
     var inType = '<select id="inputType">' + o1 + o2 + o3 + o4 + o5 + o6 + o7 + '</select>';
     var outType = '<select id="outputType">' + o1 + o2 + o3 + o4 + o5 + o6 + o7 + '</select>';
-    var cs = document.getElementById('cb');
+    var cs = document.getElementById('cb'); 
+    var s = document.getElementsByTagName("style")[0];
+
     if (cs.checked == true){ /* If the switch is on generate converter bar */
         d.insertAdjacentHTML('afterbegin', 'Convert ' + inVal + inType + ' to ' + outType + ' <button id="cbtn">&rarr;</button>' + ': ' +  '<span id="out"></span>');
         document.getElementById('cbtn').addEventListener('click', convert);
+        /* Converter styling (scb = styling converter bar) */
+        var scb1 = ' #converter-bar{position: fixed; width: 100%; background-color: #333; color: white; padding: 6px 10px;}'
+        s.insertAdjacentHTML('beforeend', scb1)
     }
     else {
         d.innerHTML = '';
     }
+
+  
+
 }
 
 function convert(){
