@@ -6,10 +6,10 @@ function generateSelectorNavBar() {
     var edc1 = '<a href="list.html">Recipe Index</a>'; 
     var edc2 = '<a href="glossary.html">Glossary</a>'; 
     var edm = '<div class="dropdown-content">' + edc1 + edc2 + '</div>';
-    var e3 = '<li class="navigation-element" id="dropdown"><a href="#">Menu</a>' + edm + '</li>';
+    var e3 = '<li class="navigation-element" id="dropdown"><a href="#">Menu&#9662;</a>' + edm + '</li>';
     var e4 = '<li class="navigation-element"><a href="#">Converter</a></li>';
-    var e5 = '<li class=navigation-element"><label class="switch"><input type="checkbox" id="cb"><span class="slider"></span></label></li>'; /* adds a checkbox that styled as a slider switch to navigation bar> */
-    var c1 = '<br><br><div id="converter-bar"></div>' /* Adds a div for a unit converter below the nav bar. */
+    var e5 = '<li class=navigation-element"><label class="switch"><input type="checkbox" id="select"><span class="slider"></span></label></li>'; /* adds a checkbox that styled as a slider switch to navigation bar> */
+    var c1 = '<br><br><div class="converter-bar" id="cb"></div>' /* Adds a div for a unit converter below the nav bar. */
     x.insertAdjacentHTML('afterbegin','<ul class="navigation-bar" id="nb">' + e1 + e2 + e3 + e4 + e5 + '</ul>' + c1);
     
     var s = document.getElementsByTagName("style")[0];
@@ -36,29 +36,31 @@ function generateSelectorNavBar() {
 }
 
 window.addEventListener('load', (event) => {
-    var cs = document.getElementById('cb');
+    var cs = document.getElementById('select');
     cs.addEventListener('click', generateConverter);
 });
 
 function generateConverter(){
     /* Converter contents */
-    var d = document.getElementById('converter-bar');
+    var d = document.getElementById('cb');
     var inVal = '<input id="inputValue" type="number" value="1" min="0" max="10"></input>';
     var o1 = '<option>Cup</option>', o2 = '<option>Quart</option>', o3 = '<option>Gallon</option>', o4 ='<option>Ounce</option>', o5 = '<option>Milliliter</option>', o6 = '<option>Table Spoon</option>', o7 ='<option>Tea Spoon</option>';
     var inType = '<select id="inputType">' + o1 + o2 + o3 + o4 + o5 + o6 + o7 + '</select>';
     var outType = '<select id="outputType">' + o1 + o2 + o3 + o4 + o5 + o6 + o7 + '</select>';
-    var cs = document.getElementById('cb'); 
+    var cs = document.getElementById('select'); 
     var s = document.getElementsByTagName("style")[0];
 
     if (cs.checked == true){ /* If the switch is on generate converter bar */
         d.insertAdjacentHTML('afterbegin', 'Convert ' + inVal + inType + ' to ' + outType + ' <button id="cbtn">&rarr;</button>' + ': ' +  '<span id="out"></span>');
         document.getElementById('cbtn').addEventListener('click', convert);
         /* Converter styling (scb = styling converter bar) */
-        var scb1 = ' #converter-bar{position: fixed; width: 100%; background-color: #333; color: white; padding: 6px 10px;}'
+        var scb1 = ' .converter-bar{position: fixed; width: 100%; background-color: #333; color: white; padding: 6px 10px;}'
         s.insertAdjacentHTML('beforeend', scb1)
+        d.classList.add('converter-bar')
     }
     else {
         d.innerHTML = '';
+        d.classList.remove('converter-bar'); /*this appears to completly remove the class not just the styling*/
     }
 
   
