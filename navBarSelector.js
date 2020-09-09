@@ -12,9 +12,10 @@ function generateSelectorNavBar() {
     var c1 = '<br><br><div class="converter-bar" id="cb"></div>' /* Adds a div for a unit converter below the nav bar. */
     x.insertAdjacentHTML('afterbegin','<ul class="navigation-bar" id="nb">' + e1 + e2 + e3 + e4 + e5 + '</ul>' + c1);
     
-    var s = document.getElementsByTagName("style")[0];
+    
     
     /* - Styling of Navigation Bar (sn = Styling Navigation) */
+    var s = document.getElementsByTagName("style")[0];
     var sn1 = ' .navigation-bar { list-style-type: none; margin: 0; padding: 0; background-color: #333; position: fixed; top: 0; width: 100%;} ';	
     var sn2 = ' .navigation-element {float: left;}' ;
     var sn3 = ' .navigation-element a{display: inline-block; padding: 10px 6px; text-decoration: none; color: white;}' ;
