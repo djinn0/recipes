@@ -2,7 +2,7 @@ function generateFooter()
 {
     /* A function that generates the HTML for a footer on a webpage */
     /* <script src="footer.js"></script> should be added to the <head> */
-    /* <div id="footerLoc"></div> and <script>generateFooter();</script> should be added as the last elements in <body> */
+    /* <script>generateFooter();</script> should be added as the last element in <body> */
     /*let x = document.getElementById("footerLoc");*/
     var x = document.getElementsByTagName("body")[0];
     let d = new Date();
