@@ -11,7 +11,7 @@ function generateFooter()
     /* Styling of Footer Bar (sf = Styling Footer) */
     
     var s = document.getElementsByTagName("style")[0];
-    var sf1 = '.footer-bar{ list-style-type: none; margin: 0; padding: 0; background-color: #333; width: 100%;}';
+    var sf1 = '.footer-bar{ list-style-type: none; margin: 0; padding: 0; background-color: #333; width: 100%; position: relative; top: 50%;}';
     var sf2 = '.footer-element{float: left;}'
     var sf3 = '.footer-element a{display: inline-block; padding: 10px 6px; text-decoration: none; color: white; }'
     var sf4 = ' .footer-element a:hover{ background-color: #111}'
