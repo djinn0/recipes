@@ -1,7 +1,10 @@
 
+/* This file generates and styles a footer bar on page load */
+/* Add <script src="footer2.js"></script> and <style> tag to <head>  */
 window.addEventListener('load', (event) => { 
     generateFooter();
 });
+
 
 
 

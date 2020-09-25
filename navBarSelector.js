@@ -1,3 +1,5 @@
+/* This file generates and styles a Navigation Bar on page load */
+/* Add <script src="navBarSelector.js"></script> and <style> tag to <head>  */
 window.addEventListener('load', (event) => { 
     generateSelectorNavBar();
     var cs = document.getElementById('select');
