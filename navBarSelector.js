@@ -1,3 +1,9 @@
+window.addEventListener('load', (event) => { 
+    generateSelectorNavBar();
+    var cs = document.getElementById('select');
+    cs.addEventListener('click', generateConverter);
+});
+
 function generateSelectorNavBar() {
     /* - Elements of Navigation bar  (e = Element, edc = dropdown content, dm = dropdown menu)*/
     var x = document.getElementsByTagName("body")[0];
@@ -25,8 +31,6 @@ function generateSelectorNavBar() {
     var sn7 = ' .dropdown-content a{display: block;}'
     
     /* - Styling of Sliding Switch */
-    var selectorStyling = '';
-    
     var ss1 = '.switch {position: relative; vertical-align: -12px; display: inline-block; width: 36px; height: 20px; } '
     var ss2 = '.slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #CCC; transition: .4s; border-radius: 34px;}'
     var ss3 = '.slider:before {position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .4s; border-radius: 50%;}'
@@ -36,10 +40,7 @@ function generateSelectorNavBar() {
     
 }
 
-window.addEventListener('load', (event) => {
-    var cs = document.getElementById('select');
-    cs.addEventListener('click', generateConverter);
-});
+
 
 function generateConverter(){
     /* Converter contents */
@@ -55,7 +56,7 @@ function generateConverter(){
         d.insertAdjacentHTML('afterbegin', 'Convert ' + inVal + inType + ' to ' + outType + ' <button id="cbtn">&rarr;</button>' + ': ' +  '<span id="out"></span>');
         document.getElementById('cbtn').addEventListener('click', convert);
         /* Converter styling (scb = styling converter bar) */
-        var scb1 = ' .converter-bar{position: fixed; width: 100%; background-color: #333; color: white; padding: 6px 10px;}'
+        var scb1 = ' .converter-bar{position: fixed; width: 100%; background-color: #333; color: white; padding: 6px 12px; margin: 0;}'
         s.insertAdjacentHTML('beforeend', scb1)
         d.classList.add('converter-bar')
     }
