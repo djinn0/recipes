@@ -58,7 +58,7 @@ function generateConverter(){
         d.insertAdjacentHTML('afterbegin', 'Convert ' + inVal + inType + ' to ' + outType + ' <button id="cbtn">&rarr;</button>' + ': ' +  '<span id="out"></span>');
         document.getElementById('cbtn').addEventListener('click', convert);
         /* Converter styling (scb = styling converter bar) */
-        var scb1 = ' .converter-bar{position: fixed; width: 100%; background-color: #333; color: white; padding: 6px 12px; margin: 0;}'
+        var scb1 = ' .converter-bar{position: fixed; width: 100%; background-color: #333; color: white; padding: 6px 12px; margin: 0; z-index: 10;}'
         s.insertAdjacentHTML('beforeend', scb1)
         d.classList.add('converter-bar')
     }
