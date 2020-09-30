@@ -2,37 +2,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="navigationbar.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="navBarSelector.js"></script>
+  <script src="footer2.js"></script>
   <style>
+    
+    /*
     .rl{
       background-color: aquamarine;
-      list-style-type: none;
       width: 25%;
       margin: 5px;
       padding: 2px;
       box-shadow: 4px 4px 2px #333
     }
+    */
+
+    .rl{
+      list-style: none;
+      counter-reset: listCounter;
+    }
+
+    .rli{
+      margin-bottom: 4px;
+      background-color: rgb(222, 233, 248);
+      width: 350px;
+      font-size: 20px;
+      border-radius: 5%;
+    }
+
+    .rli a{
+      text-decoration: none;
+      /*color: red;*/
+    }
+
+    /* Styling of counter */
+    .rli:before{  
+      counter-increment: listCounter;
+      content: counter(listCounter);
+      background: aquamarine;
+      color: white;
+      border-radius: 100%;
+      width: 1.2em;
+      text-align: center;
+      display: inline-block;
+    }
+
+    body{
+      margin: 0;
+    }
+
 
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->  
-  <div id="navBarLoc"></div>
-  <script>generateNavBar();</script>
     
   <h1>Index of Recipes</h1>
-    <ul>
+    <ul class='rl'>
       <!--A-->
       <!--B-->
-        <li class="rl"><a href="blackbeans.html">Black Beans and Plantains</a></li>
+        <li class='rli'><a href='blackbeans.html'> Black Beans and Plantains</a></li>
       <!--C-->
       <!--D-->
       <!--E-->
       <!--F-->
       <!--G-->
-        <li class="rl"><a href="germanpancakes.html">German Pancakes</a></li>
+        <li class='rli'><a href='germanpancakes.html'> German Pancakes</a></li>
       <!--H-->
       <!--I-->
       <!--J-->
@@ -42,12 +76,12 @@
       <!--N-->
       <!--O-->
       <!--P-->
-        <li class="rl"><a href="pupusa.html">Pupusas with Coleslaw and Salsa</a></li>
+        <li class='rli'><a href='pupusa.html'> Pupusas with Coleslaw and Salsa</a></li>
       <!--Q-->
       <!--R-->
       <!--S-->
-        <li class="rl"><a href="SpaghettiCarbonara.html">Spaghetti Carbonara</a></li>
-        <li class="rl"><a href="stroganoff.html">Stroganoff</a></li>
+        <li class='rli'><a href='SpaghettiCarbonara.html'> Spaghetti Carbonara</a></li>
+        <li class='rli'><a href='stroganoff.html'> Stroganoff</a></li>
       <!--T-->
       <!--U-->
       <!--V-->
