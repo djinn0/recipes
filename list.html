@@ -15,33 +15,56 @@
       box-shadow: 4px 4px 2px #333
     }
     */
-
+    
     .rl{
       list-style: none;
       counter-reset: listCounter;
+      display: inline-block;
     }
 
 
-
+    /*
     .rli{
       margin-bottom: 4px;
       background-color: rgb(222, 233, 248);
       width: 350px;
       font-size: 20px;
       border-radius: 5%;
+      transition: all .3s ease-out;
     }
-
+    */
+    /*
     .rli:hover{
       background-color: rgb(170, 198, 236);
 
     }
+    */
+    .rli{
+
+    }
+  
 
 
     .rli a{
       text-decoration: none;
-      /*color: red;*/
+      background-color: rgb(222, 233, 248);
+      display: inline-block;
+      width: 350px;
+      padding: 4px;
+      margin: 8px 0px 0px 8px;
+      box-shadow: 6px 6px 3px lightgray;
+      font-size: 20px;
     }
-
+    
+    .rli a:hover{
+      /*background-color: rgb(170, 198, 236);*/
+      box-shadow: 3px 3px 2px lightgray;
+    }
+    
+    .rli:hover::before{
+      font-size: 25px;
+    }  
+  
     /* Styling of counter */
     .rli:before{  
       counter-increment: listCounter;
@@ -52,6 +75,8 @@
       width: 1.2em;
       text-align: center;
       display: inline-block;
+      box-shadow: 6px 6px 3px lightgray;
+      font-size: 20px;
     }
 
     body{
