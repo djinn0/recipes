@@ -4,13 +4,14 @@
     text-decoration: none;
   }
   
-  .picture { /* sizing and positioning of pictures in recipes */
+  /* sizing and positioning of pictures in recipes */
+  /*.picture { 
     width: 60%;
     height: 60%;
-    margin-left: 2%;
+    margin-left: 20%;
     box-shadow: 10px 10px 5px #333;
   } 
-  
+  */
   body{
     margin: 0;
     padding: 0;
@@ -25,8 +26,8 @@
     margin: 0;
   }
 
-
-  .recipe { /* styling for recipe list */
+  /* styling for recipe list */
+  /*.recipe { 
     list-style-type: none;
     display:inline-block;
     border:2px solid #000;
@@ -35,13 +36,14 @@
     margin-left: 2%;
     box-shadow: 10px 10px 5px #333
   }
-
+  */
+  /*
   .cookInstruct {
     font-size: 24px;
     margin-left: 2%;
     width: 80%;
   }
-  
+  */
   
   /* --styling for navigation bar --*/ 
   
