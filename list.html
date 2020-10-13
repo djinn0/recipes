@@ -5,16 +5,27 @@
   <script src="navBarSelector.js"></script>
   <script src="footer2.js"></script>
   <style>
-    
-    /*
-    .rl{
-      background-color: aquamarine;
-      width: 25%;
-      margin: 5px;
-      padding: 2px;
-      box-shadow: 4px 4px 2px #333
+    /* Display picture and list in a flexbox  */
+    .t1{
+      display: flex;
+      padding: 0;
+      margin: 0;
     }
-    */
+    
+    .f1{
+      flex:  1;
+      background-color: yellow;
+    }
+
+    .f2{
+      flex: 2;
+      background-color: white;
+    }
+    
+    .f2 img{
+      height: 50vh;
+    }
+    
     
     .rl{
       list-style: none;
@@ -22,29 +33,9 @@
       display: inline-block;
     }
 
+    
 
-    /*
-    .rli{
-      margin-bottom: 4px;
-      background-color: rgb(222, 233, 248);
-      width: 350px;
-      font-size: 20px;
-      border-radius: 5%;
-      transition: all .3s ease-out;
-    }
-    */
-    /*
-    .rli:hover{
-      background-color: rgb(170, 198, 236);
-
-    }
-    */
-    .rli{
-
-    }
-  
-
-
+    /* styling of list element */
     .rli a{
       text-decoration: none;
       background-color:#333;
@@ -89,48 +80,73 @@
 </head>
 <body>
 
+
+
+
+
     
-  <h1>Index of Recipes</h1>
-    <ul class='rl'>
-      <!--A-->
-      <!--B-->
-        <li class='rli'><a href='blackbeans.html'> Black Beans and Plantains</a></li>
-      <!--C-->
-      <!--D-->
-      <!--E-->
-      <!--F-->
-      <!--G-->
-        <li class='rli'><a href='germanpancakes.html'> German Pancakes</a></li>
-      <!--H-->
-      <!--I-->
-      <!--J-->
-      <!--K-->
-      <!--L-->
-      <!--M-->
-      <!--N-->
-      <!--O-->
-      <!--P-->
-        <li class='rli'><a href='pupusa.html'> Pupusas with Coleslaw and Salsa</a></li>
-      <!--Q-->
-      <!--R-->
-      <!--S-->
-        <li class='rli'><a href='SpaghettiCarbonara.html'> Spaghetti Carbonara</a></li>
-        <li class='rli'><a href='stroganoff.html'> Stroganoff</a></li>
-      <!--T-->
-      <!--U-->
-      <!--V-->
-      <!--W-->
-      <!--X-->
-      <!--Y-->
-      <!--Z-->
+  <h1 id='hello1'>Index of Recipes</h1>
+    
+    <div class='t1'>
+      <div class='f1'>
+        <ul class='rl'>
+          <!--A-->
+          <!--B-->
+            <li class='rli' id='blackbeans'><a href='blackbeans.html'> Black Beans and Plantains</a></li>
+          <!--C-->
+          <!--D-->
+          <!--E-->
+          <!--F-->
+          <!--G-->
+            <li class='rli' id='germanpancakes'><a href='germanpancakes.html'> German Pancakes</a></li>
+          <!--H-->
+          <!--I-->
+          <!--J-->
+          <!--K-->
+          <!--L-->
+          <!--M-->
+          <!--N-->
+          <!--O-->
+          <!--P-->
+            <li class='rli' id='pupusa'><a href='pupusa.html'> Pupusas with Coleslaw and Salsa</a></li>
+          <!--Q-->
+          <!--R-->
+          <!--S-->
+            <li class='rli' id='spaghetticarbonara'><a href='SpaghettiCarbonara.html'> Spaghetti Carbonara</a></li>
+            <li class='rli' id='stroganoff'><a href='stroganoff.html'> Stroganoff</a></li>
+          <!--T-->
+          <!--U-->
+          <!--V-->
+          <!--W-->
+          <!--X-->
+          <!--Y-->
+          <!--Z-->
+        </ul>
+      </div>
+      <div class='f2'>
+        <img id='mainImage' src="pupusa.jpg">
+      </div>
+    </div>
+    
+    <script>
+      /*Display Recipe image when moused over */
+      /*note an event listener will need to be added for every recipe in the list */
+      var x = document.getElementById('blackbeans');
+      x.addEventListener("mouseover", function() {
+        changeImage('GermanPancake.jpg');
+      });
+      x.addEventListener("mouseout", function(){
+        changeImage('pupusa.jpg');
+      });
       
-    
-    
-    
-    
-    </ul>
-    
-    
+      /* Changes the source image */
+      function changeImage(newImage){
+        document.getElementById('mainImage').src = newImage;
+      }
+
+
+
+    </script>
     
     
     
