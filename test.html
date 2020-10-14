@@ -4,21 +4,49 @@
       <script src="navBarSelector.js"></script>
       <script src="footer2.js"></script>
       <style>
-          .homePageDisplay{
-            width: 100%;
-            background-image: 'plateLogo1.jpg';
-          }
-        @media only screen and (max-width: 700px){
+          /*
+          @media only screen and (max-width: 700px){
           .homePageDisplay{
             background: url(plateLogo1.jpg) 50% 50% no-repeat;
 
           }
+          */
+          .q{
+            font-size: 30px;
+            text-align: center;
+          }
+          .textOverlay{
+            position: absolute;
+            top: 15px;
+            right: 75px;
+            color: white;
+            font-size: 45px;
+            font-family:Arial, Helvetica, sans-serif Tahoma, sans-serif;
+          
+          }
+
+          @media only screen and (max-width: 800px){
+            .q{ 
+              font-size: 24px;
+              text-align: center;
+              margin-left: 5%;
+              margin-right: 5%;
+            }
+
+            .textOverlay{
+              position: absolute;
+              top: 15px;
+              left: 10px;
+              color: white;
+              font-size: 30px;
+              font-family:Arial, Helvetica, sans-serif Tahoma, sans-serif;
+            
+            }
+
+          }
 
 
 
-
-
-        }
 
 
         body {
@@ -28,7 +56,47 @@
     </head>
     <body>
       
-      <div class=HomePageDisplay></div>
+      <div>
+        <img id='pic1' class='pic1' style='width: 100%'>
+        
+        <div class=textOverlay><h1>The Redd Recipe Repository</h1></div>
+      </div>
+      
+      <p class='q'><br>"Cooking is like love. It should be entered into with abandon or not at all."<i> Harriet van Horne</i></p> 
+      
+      
+      <script>
+        var x = document.getElementById('pic1');
+        if (window.innerWidth < 800){
+          x.src = 'plateLogo2.jpg';
+        } 
+        else{
+          x.src = 'plateLogo1.jpg';
+        }
+        
+
+
+        window.addEventListener('resize', test)
+        
+        function test(){
+          
+          if (window.innerWidth < 800){
+            x.src='plateLogo2.jpg'
+          }
+          else {
+            x.src='plateLogo1.jpg'
+          }
+        }
+
+        /*
+        window.addEventListener('resize', selectPhoto);
+
+        function selectPhoto(){
+          if (window.innerWidth < 800){ x.src = 'plateLogo2.jpg'; } 
+        else{ x.src = 'plateLogo1.jpg';}
+        */
+      </script>
+
 
     </body>
   </html>
