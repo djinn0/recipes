@@ -1,60 +1,87 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <script src="navBarSelector.js"></script>
-  <script src="footer2.js"></script>
-  <style>
-    body {
-      margin: 0;
-    }
-    
-    .container {
-      position: relative;
-    }
+  <html>
+    <head>
+      <script src="navBarSelector.js"></script>
+      <script src="footer2.js"></script>
+      <style>
+        
+          .q{
+            font-size: 30px;
+            text-align: center;
+          }
+          .textOverlay{
+            position: absolute;
+            top: 15px;
+            right: 75px;
+            color: white;
+            font-size: 45px;
+            font-family:Arial, Helvetica, sans-serif Tahoma, sans-serif;
+          
+          }
 
-/* Text overlaying image */
-    .text-block {
-      position: absolute;
-      top: 15px;
-      right: 75px;
-      color: white;
-      font-size: 45px;
-      font-family:Arial, Helvetica, sans-serif Tahoma, sans-serif;
-    }
+          @media only screen and (max-width: 800px){
+            .q{ 
+              font-size: 24px;
+              text-align: center;
+              margin-left: 5%;
+              margin-right: 5%;
+            }
 
-    .q{
+            .textOverlay{
+              position: absolute;
+              top: 15px;
+              left: 10px;
+              color: white;
+              font-size: 30px;
+              font-family:Arial, Helvetica, sans-serif Tahoma, sans-serif;
+            
+            }
 
-      font-size: 30px;
-      font-family:Georgia, 'Times New Roman', Times, serif;
-      text-align: center;
+          }
+
+
+
+
+
+        body {
+          margin: 0;
+        }
+      </style>
+    </head>
+    <body>
       
-    
-    }
-
-  </style>
-  
-
-  <!--<link rel="stylesheet" type="text/css" href="style.css">-->
-</head>
-<body>
-
-<div class="containter">
-  <img src="plateLogo1.jpg" style="width: 100%";>
-  <div class="text-block">
-    <h1>The Redd Recipe Repository</h1>
-
-  </div>
-</div> 
-
-<p class='q'><br>"Cooking is like love. It should be entered into with abandon or not at all."<i> Harriet van Horne</i></p>   
-
+      <div>
+        <img id='pic1' class='pic1' style='width: 100%'>
+        
+        <div class=textOverlay><h1>The Redd Recipe Repository</h1></div>
+      </div>
+      
+      <p class='q'><br>"Cooking is like love. It should be entered into with abandon or not at all."<i> Harriet van Horne</i></p> 
+      
+      
+      <script>
+        var x = document.getElementById('pic1');
+        if (window.innerWidth < 800){
+          x.src = 'plateLogo2.jpg';
+        } 
+        else{
+          x.src = 'plateLogo1.jpg';
+        }
+        
 
 
- 
-  
-</body>
+        window.addEventListener('resize', test)
+        
+        function test(){
+          
+          if (window.innerWidth < 800){
+            x.src='plateLogo2.jpg'
+          }
+          else {
+            x.src='plateLogo1.jpg'
+          }
+        }
 
-
-
-
-</html>
+      </script>
+    </body>
+  </html>
