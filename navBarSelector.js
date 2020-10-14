@@ -26,7 +26,7 @@ function generateSelectorNavBar() {
     var s = document.getElementsByTagName("style")[0];
     var sn1 = ' .navigation-bar { list-style-type: none; margin: 0; padding: 0; background-color: #333; position: fixed; top: 0; width: 100%; z-index: 11;} ';	
     var sn2 = ' .navigation-element {float: left;}' ;
-    var sn3 = ' .navigation-element a{display: inline-block; padding: 10px 6px; text-decoration: none; color: white;}' ;
+    var sn3 = ' .navigation-element a{display: inline-block; padding: 10px 6px; text-decoration: none; color: white; font-size: 40px;}' ;
     var sn4 = ' .navigation-element a:hover{ background-color: #111}'
     var sn5 = ' .dropdown-content {display: none; position: absolute; background-color: #333; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); }';
     var sn6 = ' #dropdown:hover .dropdown-content {display: block;}'; /*display menu content on hover */
