@@ -17,7 +17,7 @@ function generateSelectorNavBar() {
     var e3 = '<li class="navigation-element" id="dropdown"><a href="#">Menu&#9662;</a>' + edm + '</li>';
     var e4 = '<li class="navigation-element"><a href="#">Converter</a></li>';
     var e5 = '<li class=navigation-element"><label class="switch"><input type="checkbox" id="select"><span class="slider"></span></label></li>'; /* adds a checkbox that styled as a slider switch to navigation bar> */
-    var c1 = '<br><br><div class="converter-bar" id="cb"></div>' /* Adds a div for a unit converter below the nav bar. */
+    var c1 = '<br><br><br><div class="converter-bar" id="cb"></div>' /* Adds a div for a unit converter below the nav bar. */
     x.insertAdjacentHTML('afterbegin','<ul class="navigation-bar" id="nb">' + e1 + e2 + e3 + e4 + e5 + '</ul>' + c1);
     
     
@@ -26,14 +26,14 @@ function generateSelectorNavBar() {
     var s = document.getElementsByTagName("style")[0];
     var sn1 = ' .navigation-bar { list-style-type: none; margin: 0; padding: 0; background-color: #333; position: fixed; top: 0; width: 100%; z-index: 11;} ';	
     var sn2 = ' .navigation-element {float: left;}' ;
-    var sn3 = ' .navigation-element a{display: inline-block; padding: 10px 6px; text-decoration: none; color: white; font-size: 40px;}' ;
+    var sn3 = ' .navigation-element a{display: inline-block; padding: 15px 9px; text-decoration: none; color: white; font-size: 36px;}' ;
     var sn4 = ' .navigation-element a:hover{ background-color: #111}'
     var sn5 = ' .dropdown-content {display: none; position: absolute; background-color: #333; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); }';
     var sn6 = ' #dropdown:hover .dropdown-content {display: block;}'; /*display menu content on hover */
     var sn7 = ' .dropdown-content a{display: block;}';
     
     /* - Styling of Sliding Switch */
-    var ss1 = '.switch {position: relative; vertical-align: -12px; display: inline-block; width: 36px; height: 20px; } '
+    var ss1 = '.switch {position: relative; vertical-align: -33px; display: inline-block; width: 36px; height: 20px; } '
     var ss2 = '.slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #CCC; transition: .4s; border-radius: 34px;}'
     var ss3 = '.slider:before {position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .4s; border-radius: 50%;}'
     var ss4 = 'input:checked + .slider { background-color: #2196F3; }'
