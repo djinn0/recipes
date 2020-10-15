@@ -1,9 +1,11 @@
 /* This file generates and styles a Navigation Bar on page load */
 /* Add <script src="navBarSelector.js"></script> and <style> tag to <head>  */
 window.addEventListener('load', (event) => { 
-    generateSelectorNavBar();
+    if (window.innerWidth < 1000){generateMobileNavBar();}
+    else{generateSelectorNavBar();}
     var cs = document.getElementById('select');
     cs.addEventListener('click', generateConverter);
+    window.addEventListener('resize', replaceNavBar);
 });
 
 function generateSelectorNavBar() {
@@ -17,7 +19,7 @@ function generateSelectorNavBar() {
     var e3 = '<li class="navigation-element" id="dropdown"><a href="#">Menu&#9662;</a>' + edm + '</li>';
     var e4 = '<li class="navigation-element"><a href="#">Converter</a></li>';
     var e5 = '<li class=navigation-element"><label class="switch"><input type="checkbox" id="select"><span class="slider"></span></label></li>'; /* adds a checkbox that styled as a slider switch to navigation bar> */
-    var c1 = '<br><br><br><div class="converter-bar" id="cb"></div>' /* Adds a div for a unit converter below the nav bar. */
+    var c1 = '<br><br><div class="converter-bar" id="cb"></div>' /* Adds a div for a unit converter below the nav bar. */
     x.insertAdjacentHTML('afterbegin','<ul class="navigation-bar" id="nb">' + e1 + e2 + e3 + e4 + e5 + '</ul>' + c1);
     
     
@@ -26,14 +28,14 @@ function generateSelectorNavBar() {
     var s = document.getElementsByTagName("style")[0];
     var sn1 = ' .navigation-bar { list-style-type: none; margin: 0; padding: 0; background-color: #333; position: fixed; top: 0; width: 100%; z-index: 11;} ';	
     var sn2 = ' .navigation-element {float: left;}' ;
-    var sn3 = ' .navigation-element a{display: inline-block; padding: 15px 9px; text-decoration: none; color: white; font-size: 36px;}' ;
+    var sn3 = ' .navigation-element a{display: inline-block; padding: 10px 6px; text-decoration: none; color: white;}' ;
     var sn4 = ' .navigation-element a:hover{ background-color: #111}'
     var sn5 = ' .dropdown-content {display: none; position: absolute; background-color: #333; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); }';
     var sn6 = ' #dropdown:hover .dropdown-content {display: block;}'; /*display menu content on hover */
     var sn7 = ' .dropdown-content a{display: block;}';
     
     /* - Styling of Sliding Switch */
-    var ss1 = '.switch {position: relative; vertical-align: -33px; display: inline-block; width: 36px; height: 20px; } '
+    var ss1 = '.switch {position: relative; vertical-align: -12px; display: inline-block; width: 36px; height: 20px; } '
     var ss2 = '.slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #CCC; transition: .4s; border-radius: 34px;}'
     var ss3 = '.slider:before {position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .4s; border-radius: 50%;}'
     var ss4 = 'input:checked + .slider { background-color: #2196F3; }'
@@ -42,7 +44,32 @@ function generateSelectorNavBar() {
     
 }
 
+function generateMobileNavBar(){
+    /* Elements of Navigation Bar e = element*/
+    var x = document.getElementsByTagName("body")[0];
+    var e1 = "<li class='navigation-element-mobile'><a href='index.html'>Home</a></li>"
+    var e2 = "<li class='navigation-element-mobile'><a href='list.html'>Recipe Index</a></li>"
+    var e3 = "<li class='navigation-element-mobile'><a href='glossary.html'>Glossary</a></li>"
+    var e4 = "<li class='navigation-element-mobile'><a href='#' class='con'>Converter</a><label class='switch'><input type='checkbox' id='select'><span class='slider'></span></label></li>"
+    var c1 = "<div class='converter-bar' id='cb'></div>"
+    x.insertAdjacentHTML('afterbegin',"<ul class='navigation-bar-mobile' id='nb'>" + e1 + e2 + e3 + e4 + "</ul>" + c1);
+    
+    /* Styling of Navigation Bar sn = Styling Navigation */
+    var s = document.getElementsByTagName("style")[0];
+    var sn1 = '.navigation-bar-mobile{ list-style-type: none; margin: 0; padding: 0; width: 100%; z-index: 11;}';
+    var sn2 = '.navigation-element-mobile{ padding: 8px; background-color: #333;  text-align: center; }'; 
+    var sn3 = '.navigation-element-mobile a{ text-decoration: none; color: white; }';
+    var sn4 = '.navigation-element-mobile:hover{ background-color: #111; }';
+    var sn5 = '.con{ padding-right: 8px; }'  
 
+    /* Styling of Sliding Switch */
+    var ss1 = '.switch {position: relative; vertical-align: -2px; display: inline-block; width: 36px; height: 20px; } '
+    var ss2 = '.slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #CCC; transition: .4s; border-radius: 34px;}'
+    var ss3 = '.slider:before {position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .4s; border-radius: 50%;}'
+    var ss4 = 'input:checked + .slider { background-color: #2196F3; }'
+    var ss5 = 'input:checked + .slider:before { transform: translateX(16px); }'
+    s.insertAdjacentHTML('beforeend', sn1 + sn2 + sn3 + sn4 + sn5 + ss1 + ss2 + ss3 + ss4 + ss5);
+}
 
 function generateConverter(){
     /* Converter contents */
@@ -66,9 +93,6 @@ function generateConverter(){
         d.innerHTML = '';
         d.classList.remove('converter-bar'); /*this appears to completly remove the class not just the styling*/
     }
-
-  
-
 }
 
 function convert(){
@@ -102,4 +126,14 @@ function convert(){
     
     /* display output */
     document.getElementById('out').innerHTML = z + ' ' + outType + '(s)';
+}
+
+function replaceNavBar()
+{
+    var a = document.getElementById('nb');
+    var c = dovument.getElementById('cb');
+    a.remove();
+    c.remove();
+    if (window.innerWidth < 1000){generateMobileNavBar();}
+    else{generateSelectorNavBar();}
 }
