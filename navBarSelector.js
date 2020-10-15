@@ -1,7 +1,7 @@
 /* This file generates and styles a Navigation Bar on page load */
 /* Add <script src="navBarSelector.js"></script> and <style> tag to <head>  */
 window.addEventListener('load', (event) => { 
-    if (window.innerWidth < 1000){generateMobileNavBar();}
+    if (window.innerWidth < 900){generateMobileNavBar();}
     else{generateSelectorNavBar();}
     var cs = document.getElementById('select');
     cs.addEventListener('click', generateConverter);
@@ -134,6 +134,6 @@ function replaceNavBar()
     var c = dovument.getElementById('cb');
     a.remove();
     c.remove();
-    if (window.innerWidth < 1000){generateMobileNavBar();}
+    if (window.innerWidth < 900){generateMobileNavBar();}
     else{generateSelectorNavBar();}
 }
