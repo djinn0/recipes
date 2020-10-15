@@ -59,7 +59,7 @@ function generateMobileNavBar(){
     var sn1 = '.navigation-bar-mobile{ list-style-type: none; margin: 0; padding: 0; width: 100%; z-index: 11;}';
     var sn2 = '.navigation-element-mobile{ padding: 8px; background-color: #333;  text-align: center; }'; 
     var sn3 = '.navigation-element-mobile a{ text-decoration: none; color: white; }';
-    var sn4 = '.navigation-element-mobile:hover{ background-color: #111; }';
+    var sn4 = '.navigation-element-mobile:hover{ background-color: #111; padding: 8px; }';
     var sn5 = '.con{ padding-right: 8px; }'  
 
     /* Styling of Sliding Switch */
