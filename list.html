@@ -14,7 +14,7 @@
     
     .f1{
       flex:  1;
-      background-color: yellow;
+      background-color:aliceblue;
     }
 
     .f2{
@@ -75,6 +75,16 @@
       margin: 0;
     }
 
+    @media only screen and (max-width: 1000px){
+      .t1{
+        display: block;
+      }
+
+      
+
+
+
+    }
 
   </style>
 </head>
@@ -115,6 +125,7 @@
             <li class='rli' id='spaghetticarbonara'><a href='SpaghettiCarbonara.html'> Spaghetti Carbonara</a></li>
             <li class='rli' id='stroganoff'><a href='stroganoff.html'> Stroganoff</a></li>
           <!--T-->
+            <li class='rli' id='TuscanTortelliniSoup'><a href='TuscanTortelliniSoup.html'>Creamy Tuscan Tortellini Soup</a></li>
           <!--U-->
           <!--V-->
           <!--W-->
@@ -124,7 +135,7 @@
         </ul>
       </div>
       <div class='f2'>
-        <img id='mainImage' src="pupusa.jpg">
+        <img id='mainImage' src="plateLogo2.jpg">
       </div>
     </div>
     
@@ -132,12 +143,61 @@
       /*Display Recipe image when moused over */
       /*note an event listener will need to be added for every recipe in the list */
       var x = document.getElementById('blackbeans');
+      
+      
+      /* A */
+      /* B */
+      /* C */
+      /* D */
+      /* E */
+      /* F */
+      /* G */
+        var gp = document.getElementById('germanpancakes');
+        gp.addEventListener("mouseover", function() { changeImage('GermanPancake.jpg'); });
+        gp.addEventListener("mouseout", function(){ changeImage('plateLogo2.jpg'); });
+      /* H */
+      /* I */
+      /* J */
+      /* K */
+      /* L */
+      /* M */
+      /* N */
+      /* O */
+      /* P */
+        var p = document.getElementById('pupusa');
+        p.addEventListener("mouseover", function() { changeImage('pupusa.jpg'); });
+        p.addEventListener("mouseout", function(){ changeImage('plateLogo2.jpg'); });
+      /* Q */
+      /* R */
+      /* S */
+        var sp = document.getElementById('spaghetticarbonara');
+        sp.addEventListener("mouseover", function() { changeImage('spaghettiCarbonara.jpg'); });
+        sp.addEventListener("mouseout", function(){ changeImage('plateLogo2.jpg'); });
+      /* T */
+        var tts = document.getElementById('TuscanTortelliniSoup');
+        tts.addEventListener("mouseover", function() { changeImage('TuscanTortellini.jpg'); });
+        tts.addEventListener("mouseout", function(){ changeImage('plateLogo2.jpg'); });
+      /* U */
+      /* V */
+      /* W */
+      /* X */
+      /* Y */
+      /* Z */
+
+
+      
+      
+      
+      
       x.addEventListener("mouseover", function() {
         changeImage('GermanPancake.jpg');
       });
       x.addEventListener("mouseout", function(){
         changeImage('pupusa.jpg');
       });
+
+
+
       
       /* Changes the source image */
       function changeImage(newImage){
