@@ -52,9 +52,9 @@ function generateSyling()
 
     /* Styling of mobile Navigation Bar (sm = Styling Mobile) */
     var sm1 = '.navigation-bar-mobile{ list-style-type: none; margin: 0; padding: 0; width: 100%; z-index: 11; }';
-    var sm2 = '.navigation-element-mobile{ padding: 8px; background-color: #333;  text-align: center;  }'; 
+    var sm2 = '.navigation-element-mobile{ padding: 8px 8px 8px 20px; background-color: #333; font-size: 36px; text-align: left; }'; 
     var sm3 = '.navigation-element-mobile a{ text-decoration: none; color: white; }';
-    var sm4 = '.navigation-element-mobile:hover{ background-color: #111; padding: 8px; }';
+    /*var sm4 = '.navigation-element-mobile:hover{ background-color: #111; padding: 8px; }';*/
     var sm5 = '.con{ padding-right: 8px; }' 
 
     /* - Styling of Navigation Bar (sn = Styling Navigation) */
