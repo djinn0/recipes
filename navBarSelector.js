@@ -129,29 +129,6 @@ function convert(){
 }
 
 
-
-/*
-function replaceNavBar()
-{
-    var nbs = document.getElementById('nbs');
-    var nbm = document.getElementById('nbm');
-    var b1 = document.getElementById('b1');
-    var b2 = document.getElementById('b2')
-    var c = document.getElementById('cb');
-    
-      
-    
-    if(b1)  b1.remove();
-    if(b2)  b2.remove();
-    if(nbs) nbs.remove();
-    if(nbm) nbm.remove();
-    if(c)   c.remove();
-    
-
-    if (window.innerWidth <= 1000)generateMobileNavBar()
-    else generateSelectorNavBar()
-}*/
-
 function replaceNavBar()
 {
     var nbs = document.getElementById('nbsContainer');
